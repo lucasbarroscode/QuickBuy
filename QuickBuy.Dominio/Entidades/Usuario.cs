@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-
+//teste gitbash
 namespace QuickBuy.Dominio.Entidades
 {
     public class Usuario : Entidade
