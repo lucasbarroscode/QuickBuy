@@ -8,7 +8,37 @@ namespace QuickBuy.Repositorio.Config
     {
         public void Configure(EntityTypeBuilder<Usuario> builder)
         {
-            throw new System.NotImplementedException();
+            builder.HasKey(u => u.Id);
+
+            //builder utiliza o padrão fluent
+            //É uma forma de nomear métodos para serem usados em uma construção que dê a impressão de estar escrevendo um texto corrente, fluido. 
+            //Ele desiste de uma nomenclatura comum e padronizada para adotar algo que faça sentido quando o método for usado tentando simular um texto fluente em língua humana. 
+            //É uma forma de deixar o código mais declarativo.
+
+            builder
+                .Property(u => u.Email)
+                .IsRequired()
+                .HasMaxLength(50);
+
+            builder
+                .Property(u => u.Senha)
+                .IsRequired()
+                .HasMaxLength(400);
+
+            builder
+                .Property(u => u.Nome)
+                .IsRequired()
+                .HasMaxLength(50);
+
+            builder
+                .Property(u => u.SobreNome)
+                .IsRequired()
+                .HasMaxLength(50);
+
+            //builder.Property(u => u.Pedidos);
+
+
+
         }
     }
 }

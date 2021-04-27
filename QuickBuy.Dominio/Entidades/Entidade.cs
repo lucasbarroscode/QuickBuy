@@ -6,7 +6,7 @@ namespace QuickBuy.Dominio.Entidades
     //abstract serve para ninguem instanciar a classe
     public abstract class Entidade
     {
-        public List<string> _mensagensValidacao { get; set; }
+        private List<string> _mensagensValidacao { get; set; }
         private List<string> mensagemValidacao 
         {
             get { return _mensagensValidacao ?? (_mensagensValidacao = new List<string>()); }
